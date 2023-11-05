@@ -1,13 +1,13 @@
 <template>
   <div class="container mx-auto p-8">
-    <div class="max-w-4xl mx-auto relative border-2 border-gray-300 rounded-[20px] ">
+    <div class="max-w-4xl mx-auto relative border-2 border-gray-300 rounded-[20px]" v-motion-roll-bottom>
       <input type="text" placeholder="Search users..."
         class="w-full h-full p-5 pr-14 text-2xl rounded-[20px] text-gray-500 selection:bg-gray-500 selection:text-white outline-none placeholder:text-gray-400"
         v-model="query" @input="searchPhotos">
       <img src="../assets/search.svg" alt="Search" class="absolute top-4 right-3 cursor-pointer select-none p-1"
         @click="searchPhotos">
     </div>
-    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 my-8 text-gray-500">
+    <div v-motion-fade class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 my-8 text-gray-500">
       <div v-for="user in users"
         class="flex flex-col items-center justify-center text-center gap-1  border border-gray-200 shadow p-5 rounded-xl hover:bg-gray-100 overflow-x-auto">
         <div class="rounded-full shadow-lg mb-2">
